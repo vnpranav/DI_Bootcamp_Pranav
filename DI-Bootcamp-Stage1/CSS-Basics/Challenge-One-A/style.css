@@ -1,0 +1,40 @@
+body{
+    background-color: rgba(240, 167, 107, 1);
+}
+
+#wrap{
+    border: 5px dashed black;
+    background-color: antiquewhite;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    height: auto;
+}
+
+h1{
+    border-bottom: 5px dotted black;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+}
+
+ul{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li{
+    list-style: none;
+    text-align: center;
+    display: block;
+    margin: 5px;
+}
+
+li::first-letter{
+    font-size: larger;
+}
+
+.copyright{
+    text-align: center;
+}
