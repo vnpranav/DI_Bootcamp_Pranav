@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <h3>Registartion sheet</h3>
+    <div>
+        <form method="get" >
+            Name: <input type="text" name="name"><br>
+            Email: <input type="email" name="email" required ><br>
+            Password: <input type="Password" name="pass" min="8"><br>
+            DOB: <input type="date" name="birthday"><br>
+    
+            Gender:<br>
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female<br>
+    
+            Education:<br>
+            <input type="checkbox" name="hsc">HSC<br>
+            <input type="checkbox" name="igcse">IGCSE<br>
+    
+            Status: <select name="status">
+                <option value="Single" name="single">single</option>
+                <option value="married" name="married">married</option>
+                <option value="complicated" name="complicated">complicated</option>
+            </select><br>
+    
+            <span><input type="submit" value="Send"></span>
+            <span><input type="reset" value="Clear"></span>
+    
+        </form>
+    </div>
+
+</body>
+</html>
