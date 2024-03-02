@@ -1,0 +1,27 @@
+body{
+    background-color: whitesmoke;
+}
+h2{
+    font-size: x-large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+#email, #password{
+    width: 90%;
+    margin: 10px 30px auto;
+    align-self: center;
+}
+#shortcut{
+    margin: 10px 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+#login-buttn{
+    align-items: center;
+}
+#login-buttn button{
+    align-self: center;
+    width: 90%;
+    background-color: blueviolet;
+}

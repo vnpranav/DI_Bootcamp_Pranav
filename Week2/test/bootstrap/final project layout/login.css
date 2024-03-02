@@ -1,0 +1,23 @@
+#body{
+    background-color: white;
+}
+#wrap{
+    margin: 40px;
+    background-color: lightskyblue;
+    border: 2px black;
+}
+#passwordarea{
+    height: 40px;
+}
+
+#buttons{
+    margin: 10px 30px;
+    display:flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.btn{
+    padding: 20px;
+    font-size: 40px;
+    background-color: grey;
+}

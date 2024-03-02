@@ -1,0 +1,29 @@
+body{
+    background-color: white;
+}
+#wrap{
+    background-color: grey;
+    margin: 40px;
+    overflow: hidden;
+}
+#navbar{
+    position: sticky;
+    top: 0;
+    color: white;
+    overflow: hidden;
+}
+#posts{
+    list-style: none;
+    align-items: center;
+    overflow: hidden;
+}
+#posts li{
+    margin: 30px;
+    align-self: center;
+    overflow: hidden;
+}
+footer{
+    align-items: center;
+    position: sticky;
+    bottom: 0;
+}
