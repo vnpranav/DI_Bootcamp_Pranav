@@ -3,3 +3,4 @@ var nums = str1.split(",").map(Number);
 console.log(nums.join());
 // stuck here
 // how to find sum without loop
+// ._.
