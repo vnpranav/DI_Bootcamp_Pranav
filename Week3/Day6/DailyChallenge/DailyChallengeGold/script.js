@@ -15,4 +15,6 @@ for (let i = 0; i < numbers.length; i++){
     }
 }
 
+// numbers.sort() ?
+
 console.log(numbers.toString());
