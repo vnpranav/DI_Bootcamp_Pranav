@@ -13,12 +13,16 @@ var list2 = document.getElementsByClassName("list")[1];
 list2.removeChild(list2.children[1]);
 
 //     Change each first name of the two <ul>'s to your name. (Hint : use a loop)
-
+for (let i = 0; i <=1 ; i++) {
+    document.querySelectorAll(".list")[i].children[0].innerText = "Pranav";
+}
 
 // Bonus - Using Javascript:
 
 //     Add a class called student_list to both of the <ul>'s.
+list1.classList.add("student");
+list2.classList.add("student");
 
 //     Add the classes university and attendance to the first <ul>.
-
+list1.classList.add("university", "attendance");
 
