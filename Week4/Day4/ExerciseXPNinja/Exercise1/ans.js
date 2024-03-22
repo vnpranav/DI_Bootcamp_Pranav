@@ -1,45 +1,40 @@
-const numPages = Math.ceil((dayStart + daysMonth) / 7);
+function createCalendar(year, month) {
+  // Create a new table element
+  const calendar = document.createElement('table');
 
+  // Create a table header row for weekdays
+  const headerRow = document.createElement('tr');
+  const daysOfWeek = ['MO', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'];
+  daysOfWeek.forEach(day => {
+    const headerCell = document.createElement('th');
+    headerCell.textContent = day;
+    headerRow.appendChild(headerCell);
+  });
+  calendar.appendChild(headerRow);
 
-    // Create the table pages
-  
-    for (let i = 0; i < numPages; i++) {
-  
-      const page = document.createElement('tr');
-  
-      for (let j = 0; j < 7; j++) {
-  
-        const day = (i * 7 + j + 2) - dayStart;
-  
-        if (day > 0 && day <= daysMonth) {
-  
-          const td = document.createElement('td');
-  
-          td.textContent = day;
-  
-          page.appendChild(td);
-  
-        } else {
-  
-          const td = document.createElement('td');
-  
-          td.textContent = '';
-  
-          page.appendChild(td);
-  
-        }
-  
-      }
-  
-      table.appendChild(page);
-  
-  
-      if ((i + 1) % 2 === 0) {
-  
-        table.appendChild(document.createElement('tbody'));
-  
-      }
+  // Calculate the first day of the given month
+  const date = new Date(year, month, 1);
+  const firstDay = date.getDay();
 
-    document.body.appendChild(table);
+  // Create table rows for the days of the month
+  let daysInMonth = new Date(year, month + 1, 0).getDate();
+  for (let day = 1; day <= daysInMonth; day++) {
+    if (date.getDay() === 0) { // If it's Sunday, start a new row
+      const newRow = document.createElement('tr');
+      calendar.appendChild(newRow);
+    }
+    const cell = document.createElement('td');
+    cell.textContent = day;
+    const currentRow = calendar.lastElementChild;
+    currentRow.appendChild(cell);
+
+    // Update the date for the next cell
+    date.setDate(day + 1);
+  }
+
+  // Append the calendar to the body (or another desired container)
+  document.body.appendChild(calendar);
 }
 
+// Example usage: create a calendar for September 2012
+createCalendar(2012, 8);
