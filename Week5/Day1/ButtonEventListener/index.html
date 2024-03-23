@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button events</title>
+    <style>
+        /* #jsstyle{
+            color:black;
+            background-color: blueviolet;
+            width: 100px;
+            height: 80px;
+        } */
+    </style>
+</head>
+<body>
+    <button id="jsstyle">This is a button</button>
+    <script>
+        let btn = document.getElementById("jsstyle");
+
+        btn.addEventListener("onclick",function() {
+            alert("Hi. You clicked me!")
+            btn.style.backgroundColor = "red";
+            btn.style.color = "white";
+        });
+        btn.addEventListener("onmouseover", change)
+
+
+        function hello(e){
+            alert("Hi. You clicked me!");
+            // change background color and text color
+            e.target.style.backgroundColor = "red";
+            e.target.style.color = "white";
+        }
+
+        function change(e){
+            // change inner text
+            e.target.innerHTML = "Do not click me. I'm shy!"
+        }
+    </script>
+</body>
+</html>

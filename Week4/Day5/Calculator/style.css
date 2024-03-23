@@ -19,6 +19,8 @@ button {
     grid-row: span 1;
     grid-column: span 4 ;
     border: 2px solid black;
+    font-size: 2rem;
+    overflow: scroll hidden;
 }
 .number {
     background-color: greenyellow;
@@ -39,7 +41,7 @@ button {
     grid-row: span 1;
     grid-column: span 2;
 }
- 
+
 #clear {
     background-color: palevioletred;
     grid-row: span 1;
