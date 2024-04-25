@@ -76,7 +76,7 @@ quoteForm.addEventListener("submit", (e) => {
     let authorname = document.getElementById("authorName");
     let newQuote = document.getElementById("newQuote");
     Quotes.push(new QuoteObject(Quotes.length,newQuote.value,authorname.value));
-    // alert("done");
+    alert("added");
     document.getElementById("quoteForm").reset()
 });
 
@@ -85,6 +85,7 @@ quoteForm.addEventListener("submit", (e) => {
 var foundQuotes =[];
 
 let searchQuote = document.getElementById("getQuote");
+
 searchQuote.addEventListener("submit", (e) => {
     e.preventDefault();
     let author = document.getElementById("searchAuthor").value;
@@ -111,7 +112,7 @@ searchQuote.addEventListener("submit", (e) => {
 
 function nextQuote() {
     let screenQuote = document.getElementById("screenQuote")
-    var quotePtr = -1;
+    let quotePtr = -1;
     for (let selection = 0; selection<foundQuotes.length;selection++) {
         if (foundQuotes[selection] == String(screenQuote.innerText)) {
             quotePtr = selection;
@@ -126,7 +127,7 @@ function nextQuote() {
 
 function prevQuote() {
     let screenQuote = document.getElementById("screenQuote")
-    var quotePtr = -1;
+    let quotePtr = -1;
     for (let selection = 0; selection<foundQuotes.length;selection++) {
         if (foundQuotes[selection] == String(screenQuote.innerText)) {
             quotePtr = selection;
