@@ -1,0 +1,87 @@
+@import url('https://fonts.cdnfonts.com/css/sega-logo-font');
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* navbar styling */
+nav{
+    position:static;
+    background-color: chartreuse;
+    width: 100%;
+    height: 6%;
+    margin: 0px;
+    top: 0;
+    left: 0;
+}
+
+#navContainer{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#title{
+    font-family: 'SEGA LOGO FONT', sans-serif;
+    margin-left: 20px;
+    color: white;
+}
+
+#searchBar{
+    width: 500px;
+    height: 80%;
+    margin: auto;
+}
+
+/* #robot screen styling */
+#robotSection{
+    /* margin-top: 6%; */
+    width: 100%;
+    height: fit-content;
+    background-image: url("./images/circuit-pattern.png");
+    background-size: auto;
+    background-repeat: repeat;
+    background-color: white;
+    text-align: center;
+}
+
+#cardSection{
+    padding: 50px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%; */
+
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: repeat(auto-fit , minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    background-color: royalblue;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background-image: url("./images/card-pattern.png");
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.imageContainer{
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+    border-radius: 50px
+}
+
+.robotImage{
+    height: 200px;
+    width: 200px;
+}
