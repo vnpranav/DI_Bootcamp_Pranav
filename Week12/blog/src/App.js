@@ -1,25 +1,5 @@
 // import logo from './logo.svg';
-// import './App.css';
-import Actor from './Actor';
-import './Actor.css'
-
-// const actorList = [
-//   { 
-//   firstName: "George",
-//   lastName:"Clooney",
-//   url:"https://images.unsplash.com/photo-1472457897821-70d3819a0e24?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c21hbGx8ZW58MHx8MHx8fDA%3D"
-//   },
-//   {
-//   firstName: "Emma",
-//   lastName:"Watson",
-//   url:"https://images.unsplash.com/photo-1472457897821-70d3819a0e24?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c21hbGx8ZW58MHx8MHx8fDA%3D"
-// },
-//   {
-//   firstName: "Tom",
-//   lastName:"Holland",
-//   url:"https://images.unsplash.com/photo-1472457897821-70d3819a0e24?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c21hbGx8ZW58MHx8MHx8fDA%3D"
-// }
-// ];
+import StarWars from "./StarWars";
 
 function App() {
   return (
@@ -39,9 +19,8 @@ function App() {
     //     </a>
     //   </header>
     // </div>
-
-    <div className='ActorList'>
-      <Actor/>
+    <div className='box'>
+      <StarWars/>
     </div>
   );
 }
