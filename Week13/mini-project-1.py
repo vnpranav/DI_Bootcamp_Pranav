@@ -1,6 +1,7 @@
 board = []
 played = []
 win_cons = [(0,1,2), (3,4,5), (6,7,8),(0,3,6),(1,4,7), (2,5,8), (0,4,8), (2,4,6)]
+nums = {1:0, 2:1, 3:2, 4:3, 5:4, 6:5, 7:6, 8:7, 9:8}
 
 def display_board():
     print("*************")
@@ -18,7 +19,7 @@ def player_input(player):
             if((pos-1) in played) or (pos not in range(1,10)):
                 print("position invalid. choose another")
             else:
-                pos -=1
+                pos = nums[pos]
                 played.append(pos)
                 board[pos] = player
                 break
@@ -38,7 +39,7 @@ def check_win():
 def play():
     #initialise board
     for i in range(9):
-        board.append('?')
+        board.append(i+1)
 
     winner = ""
     while winner == "":
@@ -49,22 +50,24 @@ def play():
         
         winner = check_win()
         if winner != "":
-            print("Player X has won")
-            display_board()
             break
 
+        # 9th turn happens at player x
         if len(played) == 9:
-            print("Draw")
             break
 
         display_board()
         print("Player O's turn")
-        player_input('Y')
+        player_input('O')
 
         winner = check_win()
         if winner != "":
-            print("Player O has won")
-            display_board()
             break
+    
+    if winner == "":
+        print("Draw")
+    else:
+         print(f'Player {winner} has won')
+    display_board()
 
 play()
