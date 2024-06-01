@@ -16,8 +16,10 @@ def player_input(player):
     while True:
         try:
             pos = int(input("Select board position to play in (1-9): "))
-            if((pos-1) in played) or (pos not in range(1,10)):
-                print("position invalid. choose another")
+            if pos not in range(1,10):
+                print("Enter a number between 1-9")
+            elif (nums[pos] in played):
+                print("Position already filled. Choose another")
             else:
                 pos = nums[pos]
                 played.append(pos)
