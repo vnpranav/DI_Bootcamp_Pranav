@@ -56,4 +56,9 @@
 # for key in keys_to_remove:
 #     if key in sample_dict.keys():
 #         del sample_dict[key]
-# print(sample_dict)
+# print((sample_dict))
+
+def calculation(a,b):
+    return (a+b, a-b)
+addition , subtraction = calculation(20,10)
+print(f"{addition}, {subtraction}")
