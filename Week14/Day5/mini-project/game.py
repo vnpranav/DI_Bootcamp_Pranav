@@ -17,7 +17,7 @@ class Game:
         from random import choice
         return choice(self.items) 
     
-    def get_game_result(self, user_item, computer_item):
+    def __get_game_result(self, user_item, computer_item):
         roll = (user_item, computer_item)
         win = [('r', 's'), ('s', 'p'), ('p', 'r')]
         draw = [('r', 'r'), ('p', 'p'), ('s','s')]
@@ -32,7 +32,7 @@ class Game:
     def play(self):
         self.user = self.__get_user_item()
         self.computer = self.__get_computer_item()
-        self.result = self.get_game_result(self.user, self.computer)
+        self.result = self.__get_game_result(self.user, self.computer)
 
         print(f"You chose: {self.user}")
         print(f"Computer chose: {self.computer}")
