@@ -1,5 +1,7 @@
 class Game:
-    items = ['r', 'p', 's']
+    def __init__(self):
+        self.items = ['r', 'p', 's']
+
     def __get_user_item(self):
         valid = False
         while valid == False:
