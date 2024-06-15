@@ -12,6 +12,8 @@ class Game:
                 return item
             else:
                 print("Enter only one of the options")
+        
+        print|('\n')
 
     def __get_computer_item(self):
         from random import choice
