@@ -5,7 +5,6 @@ def get_user_menu_choice():
     print("(g) : Play a new game")
     print("(s) : Show scores")
     print("(x) : Quit")
-    print("\n")
 
     choice = input("Enter choice: ").lower()
     if choice not in ['g', 's', 'x']:
@@ -16,9 +15,9 @@ def get_user_menu_choice():
         return choice
     
 def print_results(results):
-    print(f"Wins : {results["Win"]}")
-    print(f"Losses : {results["Loss"]}")
-    print(f"Draws : {results["Draw"]}")
+    print(f"Wins : {results['Win']}")
+    print(f"Losses : {results['Loss']}")
+    print(f"Draws : {results['Draw']}")
     print("\n")
 
 def main():

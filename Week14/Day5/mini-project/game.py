@@ -1,13 +1,13 @@
 class Game:
     def __init__(self):
-        self.items = ['r', 'p', 's']
+        self.__items = ['r', 'p', 's']
 
     def __get_user_item(self):
         valid = False
         while valid == False:
             item = input("Select (r)ock, (p)aper or (s)cissors: ").lower()
 
-            if item in self.items:
+            if item in self.__items:
                 valid = True
                 return item
             else:
@@ -15,7 +15,7 @@ class Game:
 
     def __get_computer_item(self):
         from random import choice
-        return choice(self.items) 
+        return choice(self.__items) 
     
     def __get_game_result(self, user_item, computer_item):
         roll = (user_item, computer_item)
@@ -30,12 +30,12 @@ class Game:
             return 'Loss'
 
     def play(self):
-        self.user = self.__get_user_item()
-        self.computer = self.__get_computer_item()
-        self.result = self.__get_game_result(self.user, self.computer)
+        user = self.__get_user_item()
+        computer = self.__get_computer_item()
+        result = self.__get_game_result(user, computer)
 
-        print(f"You chose: {self.user}")
-        print(f"Computer chose: {self.computer}")
-        print(f"Result : {self.result}")
+        print(f"You chose: {user}")
+        print(f"Computer chose: {computer}")
+        print(f"Result : {result}")
 
-        return self.result
+        return result
