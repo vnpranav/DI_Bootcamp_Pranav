@@ -28,7 +28,8 @@ class Queue:
         index2 = self.find_in_queue(person2)
 
         if index1 != -1 and index2 != -1:
-            self.__humans[index1], self.__humans[index2] = self.__humans[index2], self.__humans[index1]
+            # self.__humans[index1], self.__humans[index2] = self.__humans[index2], self.__humans[index1]
+            pass
         else:
             print("One of the persons was not found")
 
@@ -50,3 +51,16 @@ class Queue:
 
     def rearrange_queue(self):
         pass
+        # def rearrange_queue(self):
+        # if not self.humans:
+        #     return
+        
+        # rearranged = [self.humans[0]]
+        # last_family = rearranged[0].family
+
+        # for person in self.humans[1:]:
+        #     if person in last_family:
+        #         inserted = False
+        #         for i in range(len(rearranged)):
+        #             if rearranged[i] not in person.family and (i == len(rearranged) - 1 or rearranged[i+1] not in person.family):
+        #                 rearranged.insert(i+1,
