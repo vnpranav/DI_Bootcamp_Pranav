@@ -1,6 +1,6 @@
 import string
 def menu_input():
-    print('----- MENU ------')
+    print('\n----- MENU ------')
     print('(E)nter a word')
     print('(Q)uit program')
     
