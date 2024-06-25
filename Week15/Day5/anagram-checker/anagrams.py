@@ -16,6 +16,6 @@ while True:
             anagrams = checker.get_anagrams(word_to_check)
 
             print('Valid English word')
-            print(f'Anagrams: {', '.join(anagrams)}')
+            print(f'Anagrams: {", ".join(anagrams)}')
         else:
             print('Not a valid English word')
