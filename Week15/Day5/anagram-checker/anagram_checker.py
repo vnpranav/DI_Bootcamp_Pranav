@@ -4,9 +4,7 @@
 
 class AnagramChecker:
     def __init__(self, text_file):
-        # could create a function to load the file
-
-            
+        # could create a function to load the file   
         self.word_list = self.load_words(text_file)
 
     def load_words(self, text_file):
