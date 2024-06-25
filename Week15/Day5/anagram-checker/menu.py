@@ -1,10 +1,12 @@
 import string
+import os
 def menu_input():
     print('\n----- MENU ------')
     print('(E)nter a word')
     print('(Q)uit program')
     
     choice = input('Select option (E or Q):').upper().strip()
+    os.system('cls')
     return choice
 
 def validate_word(word):

@@ -44,10 +44,10 @@ class AnagramChecker:
         #     return anagrams
 
         for item in self.word_list:
-            if item == word:
+            if item == word.upper():
                 continue
 
-            if sorted(item) == sorted(word):
+            if self.is_anagram(word, item):
                 anagrams.append(item)
         
         if len(anagrams) == 0:
@@ -57,10 +57,10 @@ class AnagramChecker:
 
 
     def is_anagram(self, word1, word2):
-        word1 = word1.upper()
-        word2 = word2.upper()
+        word1 = sorted(word1.upper())
+        word2 = sorted(word2.upper())
 
-        if sorted(word1) == sorted(word2):
+        if word1 == word2:
             return True
         return False
 
