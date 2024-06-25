@@ -4,13 +4,22 @@
 
 class AnagramChecker:
     def __init__(self, text_file):
-        words = []
-        with open(text_file, 'r') as file:
-            for line in file:
-                words.append(line.replace('\n', ''))
+        # could create a function to load the file
+
             
-            self.word_list = words
-    
+        self.word_list = self.load_words(text_file)
+
+    def load_words(self, text_file):
+        try:
+            words = []
+            with open(text_file, 'r') as file:
+                for line in file:
+                     words.append(line.replace('\n', '').strip())
+                
+            return words
+        except:
+            return []
+        
     def is_valid_word(self, word):
         if word.upper() in self.word_list:
             return True
