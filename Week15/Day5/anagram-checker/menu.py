@@ -4,7 +4,7 @@ def menu_input():
     print('(E)nter a word')
     print('(Q)uit program')
     
-    choice = input('Select option (E or Q):')
+    choice = input('Select option (E or Q):').upper().strip()
     return choice
 
 def validate_word(word):
