@@ -7,7 +7,7 @@ def brute_search(search_value, array):
         if value == search_value:
             break
 
-    print(f'It took {count} passes to found the number')
+    print(f'It took {count} passes to found the number using brute searching')
 
 def binary_search(search_value, array):
     sorted_list = sorted(array)
