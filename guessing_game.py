@@ -16,7 +16,7 @@ def binary_search(search_value, array):
     count = 0
     found = False
 
-    while not (lower > upper):
+    while not (lower > upper) and found == False:
         count += 1
         middle = (upper + lower) // 2
 
