@@ -1,0 +1,5 @@
+snippet 1 : o(n)
+
+snippet 2 : o(n^2)
+
+snippet 3: o(n)
