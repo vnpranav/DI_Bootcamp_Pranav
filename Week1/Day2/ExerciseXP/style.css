@@ -1,0 +1,33 @@
+#difference{
+   border: 3px solid;
+   border-color: red;
+   color: red;
+   text-align: center;
+}
+
+#table{
+   margin: 0 auto;
+   border-spacing: 2px;
+}
+
+td, th{
+   border: 1px solid white;
+   text-align: center;
+   padding: 1px;
+}
+td{
+   padding: 10px;
+}
+
+.img_container{
+   margin: 0px auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+img{
+   width: 500px;
+   height: 500px;
+   border: 5px solid orange;
+}

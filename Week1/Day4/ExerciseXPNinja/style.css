@@ -1,27 +1,80 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+}
 body{
+    display: flex;
+}
+#login{
+    padding: 2rem;
+    height: 100%;
+    width: 50%;
+    text-align: center;
     background-color: whitesmoke;
 }
-h2{
-    font-size: x-large;
-    font-weight: bold;
+#login > *{
+    color: black;
+}
+h1{
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+h3{
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+input{
+    width: 60%;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem auto;
+}
+#options{
+    width:100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    margin: 1rem auto;
 }
-#email, #password{
-    width: 90%;
-    margin: 10px 30px auto;
-    align-self: center;
+#remember_me{
+    display: inline-flex;
+    width: fit-content;
 }
-#shortcut{
-    margin: 10px 50px auto;
+#submit{
+    width: 20%;
+    background-color: darkmagenta;
+    color: white;
+    margin: 1rem auto;
+}
+#social{
+    padding: 1rem;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
-#login-buttn{
-    align-items: center;
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    text-align: center;
 }
-#login-buttn button{
-    align-self: center;
-    width: 90%;
-    background-color: blueviolet;
+#register{
+    padding: 2rem;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background-color: darkmagenta;
+}
+button{
+    width: 20%;
+    color: white;
+    background-color: darkmagenta;
+    border: 2px solid white;
+    border-radius: 1rem;
+    text-align: center;
+    line-height: 40px;
 }
