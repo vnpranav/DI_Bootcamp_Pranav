@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <form>
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="firstname"><br>
+      <label for="lname">Last name:</label><br>
+      <input type="text" id="lname" name="lastname"><br><br>
+      <input type="submit" value="Submit" id="submit">
+    </form> 
+    <ul class="usersAnswer"></ul>
+</body>
+<script>
+   const form = document.querySelector('form');
+   console.log(form)
+   // let fname = document.querySelector('#fname').innerText
+   // console.log(fname)
+   // let lname = document.getElementById('#lname').innerText
+   // console.log(lname)
+
+   form.addEventListener('submit', function(event){
+      event.preventDefault()
+      const fData = new FormData(form);
+      let fname = fData.get('firstname') ;
+      let lname = fData.get('lastname');
+      let usersAnswer = document.querySelector('.usersAnswer')
+      usersAnswer.innerHTML = `Your name is ${fname} ${lname}`
+      form.reset()
+   })
+</script>
+</html>

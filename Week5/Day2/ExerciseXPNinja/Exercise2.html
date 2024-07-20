@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Email form</h1>
+   <form id="emailForm">
+      <label for="email">Email</label><br>
+      <input type="email" name="email" id="email" required><br>
+      <button type="submit">Submit</button>
+   </form>
+</body>
+<script>
+   const emailForm = document.getElementById('emailForm');
+   emailForm.addEventListener('submit', function(e) {
+      e.preventDefault()
+      const pattern = /^[^\s@]+@[^s@]+\.[^s@]+$/
+      const email = document.getElementById('email').value;
+      valid = pattern.test(email)
+      if (valid) {
+         alert('Email is valid')
+     } else {
+      alert('Email is not valid')
+     }
+   })
+</script>
+</html>
