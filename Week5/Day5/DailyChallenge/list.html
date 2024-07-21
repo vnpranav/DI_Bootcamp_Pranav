@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My To Do List</title>
+</head>
+<body>
+   <form id="addTask">
+      <input type="text" name="task" placeholder="Add a task" required>
+      <button type="submit">ADD</button>
+   </form>
+   <div class="listTasks">
+
+   </div>
+</body>
+<script>
+   const tasks =[];
+   function addTask(){
+      let form = document.querySelector('#addTask')
+      let task = form.task.value;
+      let div = document.createElement('div')
+      let btn = document.createElement('button')
+      let checkbox = document.createElement('input')
+      checkbox.inputMode = 'checkbox'
+      div.appendChild(checkbox)
+      btn.innerText = 'X'
+      btn.style.backgroundColor = 'red'
+      btn.style.color = 'white'
+      div.appendChild(btn)
+      div.appendChild(document.createTextNode(task))
+
+      let taskList = document.querySelector('.listTasks')
+      taskList.appendChild(div)
+      tasks.push(task)
+      form.reset()
+   }
+
+   let btn = document.querySelector('button')
+   btn.addEventListener('click', addTask)
+</script>
+</html>

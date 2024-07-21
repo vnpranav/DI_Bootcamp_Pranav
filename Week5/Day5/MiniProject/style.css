@@ -1,0 +1,28 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   background-color: darkgrey;
+ }
+#sidebar{
+   display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  height: 100vh;
+  width: 20%;
+  float: left;
+  background-color: darkgrey;
+  border: 2px red solid;
+  padding: 5px;
+}
+#main {
+   display: grid;
+   grid-template-columns: repeat(60, 1fr);
+   height: 100vh;
+   background-color: darkgrey;
+   border: 2px red solid;
+   padding: 5px 5px 5px 0;
+ }
