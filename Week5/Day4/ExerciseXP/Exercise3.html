@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <style>
+   #target {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      background: yellow;
+   }
+   #box {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      background-color: red;
+   }
+   </style>
+</head>
+<body>
+   <div id="target"></div>
+   <br>
+   <div id="box"></div>
+</body>
+<script>
+   let box = document.getElementById('box')
+   let target = document.getElementById('target')
+   let offsetX, offsetY;
+   let isDragging = False
+   box.addEventListener('mousedown', function (e) {
+      offsetX = e.clientX - box.offsetLeft
+      offsetY = e.clientY - box.offsetTop
+
+      isDragging = true
+
+      box.style.cursor = 'grabbing'
+   })
+
+   document.addEventListener('mousemove', function(e){
+      if(isDragging){
+         let newX = e.clientX - offsetX
+         let newY = e.clientY - offsetY
+
+         let targetRect = target.getBoundingClientRect()
+         let boxRect = target.getBoundingClientRect()
+
+         if (newX < targetRect.left){
+            newX = targetRect.left
+         }
+         if (newX > targetRect.right - boxRect.width){
+            newX = targetRect.right - boxRect.width
+         }
+         if (newY < targetRect.top){
+            newY = targetRect.top
+         }
+         if (newY > targetRect.bottom - boxRect.height) {
+            newY = targetRect.bottom - boxRect.height
+         }
+
+         box.style.left = newX+'px'
+         box.style.top = newY+'px'
+      }
+
+   })
+
+   document.addEventListener('mouseup', function(){
+      isDragging = false
+      box.style.cursor = 'pointer'
+   })
+</script>
+</html>

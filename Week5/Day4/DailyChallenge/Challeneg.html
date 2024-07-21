@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <label for="text"></label><br>
+   <input type="text" name="text" id="text">
+</body>
+<script>
+   let textBar = document.getElementById('text')
+   textBar.addEventListener('input', function(event) {
+      let text = event.target.value
+      let filtered = text.replace(/[^a-zA-Z]/g, '')
+      if (filtered !== text){
+         event.target.value = filtered
+      }
+   })
+</script>
+</html>
